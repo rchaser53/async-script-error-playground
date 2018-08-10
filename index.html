@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      global変数に値を入れて、別なところで使用しているのにasyncを使ってはいけない
+      毎回コケるならわかるが成功するケースも生まれるのが正直よくわからない
+      
+      再現環境は以下
+      mac    High Sierra バージョン 10.13.6(17G65)
+      chrome バージョン: 68.0.3440.106（Official Build） （64 ビット）
+    -->
+    <script async="async" src="./async.js"></script>
+    <script src="./normal.js" ></script>
+  </head>
+  <body></body>
+</html>
